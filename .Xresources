@@ -1,0 +1,18 @@
+
+/*      SETTINGS START         */
+#define _background #262626 /* colour235 */
+#define _foreground #eeeeee /* colour255 */
+/*      SETTINGS END           */
+
+
+
+Xterm*termName: xterm-256color
+
+XTerm*faceName: DroidSansMono\ Nerd\ Font\ Mono
+XTerm*faceSize: 12
+XTerm*saveLines: 4096
+
+XTerm*background: _background
+XTerm*foreground: _foreground
+
+XTerm*cursorColor: White
