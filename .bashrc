@@ -8,6 +8,9 @@ export M2_HOME=/opt/maven
 
 set -o vi
 
+function xcopy() {
+    xclip -selection clipboard
+}
 # Set colorful PS1 only on colorful terminals.
 # dircolors --print-database uses its own built-in database
 # instead of using /etc/DIR_COLORS.  Try to use the external file
@@ -43,11 +46,13 @@ if ${use_color} ; then
     alias grep='grep --colour=auto'
     alias egrep='egrep --colour=auto'
     alias fgrep='fgrep --colour=auto'
+    alias diff='diff --color=auto'
 else
     PS1='\u@\h \w \$ '
 fi
 
 alias please='echo sudo $(history -p !!) && sudo $(history -p !!)'
+alias pls=please
 
 EDITOR=/bin/vim
 
