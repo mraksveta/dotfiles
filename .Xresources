@@ -8,6 +8,9 @@
 
 Xterm*termName: xterm-256color
 
+Xterm*highlightSelection: true
+Xterm*selectToClipboard: true
+
 XTerm*faceName: DroidSansMono\ Nerd\ Font\ Mono
 XTerm*faceSize: 12
 XTerm*saveLines: 4096
