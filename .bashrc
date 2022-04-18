@@ -11,6 +11,15 @@ set -o vi
 function xcopy() {
     xclip -selection clipboard
 }
+
+function tmuxd() {
+    tmux attach -t default 2>/dev/null || tmux new -s default
+}
+
+function tmuxn() {
+    tmux new -s $1 2>/dev/null || tmux attach -t $1
+}
+
 # Set colorful PS1 only on colorful terminals.
 # dircolors --print-database uses its own built-in database
 # instead of using /etc/DIR_COLORS.  Try to use the external file
@@ -55,9 +64,3 @@ alias please='echo sudo $(history -p !!) && sudo $(history -p !!)'
 alias pls=please
 
 EDITOR=/bin/vim
-
-
-# run tmux on startup
-if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-    tmux attach -t default || tmux new -s default
-fi
