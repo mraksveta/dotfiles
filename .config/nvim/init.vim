@@ -7,6 +7,7 @@ call plug#begin('~/.local/share/nvim/site/bundle')
 
     Plug 'tpope/vim-commentary'
     Plug 'ycm-core/YouCompleteMe'
+    Plug 'neovimhaskell/haskell-vim'
     "  Plug 'terryma/vim-multiple-cursors'
 call plug#end()
 
@@ -23,9 +24,11 @@ set nowrap
 set hlsearch
 set encoding=utf-8
 
-colorscheme minimalist
+colorscheme sonokai
 
+map <C-n> <esc>:NERDTreeToggle<CR>
 nnoremap gd :YcmCompleter GoTo<CR>
 autocmd BufNew,BufRead,BufNewFile *.asm set ft=nasm " Kindane, hehe
 
 let g:airline_powerline_fonts = 1 " Enable support of powerline fonts
+
