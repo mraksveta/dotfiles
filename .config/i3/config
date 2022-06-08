@@ -177,6 +177,10 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
+for_window [class=".*"] border pixel 0
+gaps outer 5
+gaps inner 5
+
 bindsym $mod+r mode "resize"
 
 bindsym Print exec flameshot gui
@@ -185,6 +189,9 @@ bindsym $mod+o exec i3lock
 
 exec --no-startup-id flameshot
 exec --no-startup-id setxkbmap us,ru -option 'grp:alt_shift_toggle'
+exec --no-startup-id xrdb -merge ~/.Xresources
 exec --no-startup-id dunst
+exec --no-startup-id mate-power-manager
+exec --no-startup-id ~/.fehbg
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh --hack
