@@ -5,6 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 export M2_HOME=/opt/maven
+export PATH=$PATH:$HOME/dev/bin:$HOME/.local/bin/heroku/bin
 
 set -o vi
 
@@ -64,3 +65,9 @@ alias please='echo sudo $(history -p !!) && sudo $(history -p !!)'
 alias pls=please
 
 EDITOR=/bin/vim
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+tmuxd 2>/dev/null
