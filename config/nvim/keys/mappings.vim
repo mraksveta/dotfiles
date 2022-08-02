@@ -12,6 +12,8 @@ inoremap <c-l>    <c-o>:tabnext<CR>
 
 nnoremap ff <esc>:NERDTreeToggle<CR>
 
+nnoremap <leader>sv :source $HOME/.config/nvim/init.vim<CR>
+
 " moving between windows
 nnoremap rr <C-w>w
 
