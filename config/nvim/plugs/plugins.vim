@@ -54,6 +54,10 @@ call plug#begin('~/.local/share/nvim/site/bundle')
 
     " Git wrapper
     Plug 'tpope/vim-fugitive'
+
+    " Provides a much simpler way to use some motions in vim
+    Plug 'easymotion/vim-easymotion'
+
 call plug#end()
 
 colorscheme molokai
